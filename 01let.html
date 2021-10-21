@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 10px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        let div = document.querySelectorAll('div')
+        // var i 报错 因为var的i指向windows 循环完之后i=3
+        // for(var i =0;i<div.length;i++){
+        //     div[i].onclick = function(){
+        //         div[i].style.background = 'pink';
+        //     }
+        // }
+        // console.log(window.i);
+
+        for(let i =0;i<div.length;i++){
+            div[i].onclick = function(){
+                div[i].style.background = 'pink';
+            }
+        }
+        console.log(window.i);
+        // 打印出来的undifined
+
+        // 因为let只在块级作用域里有效 var指向的是全局
+    </script>
+</body>
+</html>

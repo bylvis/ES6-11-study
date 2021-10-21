@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getName(){
+            console.log(this,this.name);
+        }
+        let getName2 = () => {
+            console.log(this,this.name);
+        }
+        window.name = 'baiyulong'
+        const SCHOOL = {
+            name :'BYL'
+        }
+        getName() //this->window
+        getName2() //this->window
+
+        getName.call(SCHOOL) //this->SCHOOL BYL
+        getName2.call(SCHOOL) //this->window baiyulong  
+
+        // 1.let的this总是指向window 当需要调用块里面的this指向时 可以保存this的值 例如let _this = this
+
+        // 2.不能用来创建对象
+
+        // 3.不能使用argument 已经弃用
+
+        // 4.箭头函数简写
+        let add = n =>{
+            return n+n
+        }
+        console.log(add(2));
+        let pow = n => {
+            return n*n
+        }
+        console.log(pow(9));
+
+    </script>
+</body>
+</html>

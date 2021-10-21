@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const NAME = 'baiyulong';
+        // 1.无法修改
+        // NAME = 'hzs'
+        {
+            const AGE = 18
+        }
+        // 2.块级作用域性质
+        // console.log(AGE);
+
+        // 3.对数组元素和对象的修改 不算对常量的修改 不会报错
+        const TEAM= ['UZI','MING']
+        TEAM.push('LBW')
+        TEAM[0]='IMP'
+        console.log(TEAM);
+    </script>
+    <!-- const 常量 
+    1.一定要赋值
+    2.一般用大写命名
+    3.常量值无法修改 
+    4.有块级作用域-->
+</body>
+</html>
