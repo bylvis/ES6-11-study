@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fpx = {
+            name : 's11',
+            guys : [
+                'donib',
+                'lwx',
+                'xiaotian',
+                'lqs',
+                'nglr'
+            ],
+            [Symbol.iterator](){
+                let index = 0;
+                // let的this是window 所以要保存一下this
+                let _this = this;
+                return{
+                    next:function(){
+                        if(index < _this.guys.length){
+                            const res = {value:_this.guys[index]+' ' +_this.name,done:false}
+                            index++;
+                            return res
+                        }
+                        else{
+                            return{value:undefined,done:true}
+                        }
+                    }
+                }
+            }
+        }
+        for(let v of fpx){
+            console.log(v);
+        }
+        const iterator = fpx[Symbol.iterator]();
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+
+    </script>
+</body>
+</html>

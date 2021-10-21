@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // 创建symbol
+            let s = Symbol();
+            console.log(s,typeof s);
+            // 这两个不是同一个东西
+            let s2 = Symbol('RNG');
+            let s3 = Symbol('RNG');
+            console.log(s2===s3);
+            // Symbol.for()创建的会相同
+            let s4 = Symbol.for('RNG')
+            let s5 = Symbol.for('RNG')
+            console.log(s4===s5);
+            // 不能混淆运算
+            // let s6 = s2+1
+    </script>
+</body>
+</html>

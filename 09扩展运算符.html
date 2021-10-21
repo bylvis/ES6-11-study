@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        const tfboys = ['yyqx','wy','wjk']
+        function chunwan(){
+            console.log(arguments);
+        }
+        // 分成一个数组 
+        chunwan(tfboys)
+        // 分成三个属性
+        chunwan(...tfboys)
+
+        // 把伪数组转化为真的数组
+        const divs = document.querySelectorAll('div')
+        const divArr1 = [divs]
+        const divArr2 = [...divs]
+        console.log(divArr1); 
+        console.log(divArr2);
+        // 数组的合并
+        const ig = ['theshy','jacklove'];
+        const fpx = ['doinb','xiaotian','lwx'];
+        const bestTeam = ig.concat(fpx)
+        console.log('ES5',bestTeam);
+        const bestTeam2 = [...ig,...fpx]
+        console.log('ES6',bestTeam2);
+        // 数组的克隆
+        const rng = ['uzi','xiaohu','letme']
+        const RNG = [...rng]
+        console.log(RNG); 
+    </script>
+</body>
+</html>

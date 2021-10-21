@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function * gen(){
+            console.log('this is iterator1');
+            yield '入围赛'
+            console.log('this is iterator2');
+            yield '小组赛'
+            console.log('this is iterator3');
+            yield '决赛'
+            console.log('this is iterator4');
+        }
+        let iterator = gen();
+        // 迭代器返回value
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+    </script>
+</body>
+</html>

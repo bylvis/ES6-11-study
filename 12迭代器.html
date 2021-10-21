@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fpx = ['doinb','xiaotian','lwx','crisp','kehan']
+        // 直接打印值 
+        for(let v of fpx){
+            console.log(v);
+        }
+        // 打印索引
+        for(var i in fpx){
+            console.log(i);
+            console.log(fpx[i]);
+        }
+        // 创建一个迭代器
+        let iterator = fpx[Symbol.iterator]()
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+    </script>
+</body>
+</html>
