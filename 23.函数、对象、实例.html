@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function fun1(){
+
+        // }
+        // fun1.name = 'bai'
+        // fun1.change = function(){
+        //     console.log('change');
+        // }
+        // fun1.change()
+        // console.log(fun1.name);
+        // 函数就不能挂乱七八糟的属性
+
+        class Phone {
+            constructor(brand,price){
+                this.b = brand;
+                this.p = price
+            }
+            static name = 'bai';
+            static fun = ()=>{
+                console.log('this is fun');
+            }
+            call2(){
+                console.log('this is call2');
+            }
+        }
+        let phone = new Phone()
+        // 输出undifined 因为类的静态属性不属于实例化对象
+        console.log(phone.name);
+        console.log(Phone.name);
+        let phone2 = new Phone('huawei','9999')
+        console.log(phone2);
+        phone2.call2()
+    </script>
+</body>
+</html>

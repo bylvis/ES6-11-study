@@ -99,8 +99,8 @@
     p.catch(function(reason){
         console.warn(reason)
     })
-    
     例子：封装一个ajax函数，
+
 ## Set
     特点：
         不会重复，可以拿来数组去重,交集，并集，差集
@@ -113,5 +113,32 @@
     s.clear()
     s.size()
     可以用for of 遍历
+## Map
+    let m = new Map()
+    m.set("name",'byl')
+    m.size()
+    m.delete()
+    m.get() 找到对应元素的值
+    m.clear()
+    可以用for of 遍历
+
+## class 
+    所有的 JavaScript 对象都会从一个 prototype（原型对象）中继承属性和方法
+    class里面有一个constructer 类似于赋初始值吧
+    可以在类里面自定义方法 但是必须是简写模式
+    class Computer{
+            constructor(brand,price){
+                this.brand = brand;
+                this.price = price;
+            }
+            call(){
+                console.log('i can use computer');
+            }
+        }
+    static 属性 只属于类 不属于实例对象
+    注意：函数对象的属性只属于函数对象 不属于实例对象
+    所有的实例对象对象都会从一个 prototype（原型对象）中继承属性和方法
 # ps
     1.str.toString() 把16进制的字符串转化为中文
+    2.filter(遍历 返回满足条件的值)
+    3. .call 使得这个方法可以使用另外一个对象的属性
