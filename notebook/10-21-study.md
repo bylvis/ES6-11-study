@@ -138,6 +138,16 @@
     static 属性 只属于类 不属于实例对象
     注意：函数对象的属性只属于函数对象 不属于实例对象
     所有的实例对象对象都会从一个 prototype（原型对象）中继承属性和方法
+
+## 构造函数继承
+    父类构造函数的继承通过protatype原型来继承
+    ES6类继承通过extends来
+    super()相当于Phone.call(this,brand,price);
+    可以重写父类
+    子类不能调用父类的重名方法
+    1.set
+        
+    2.get
 # ps
     1.str.toString() 把16进制的字符串转化为中文
     2.filter(遍历 返回满足条件的值)

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function fn(){
+            // return 'byl';
+            // 会返回一个失败的promise
+            // 返回的结果不是一个Promise类型的对象，返回的结果就是成功的promise对象
+            // throw new Error;
+            return new Promise((resolve,reject)=>{
+                // resolve('成功的数据')
+                reject('失败了！')
+            })
+        }    
+        const res = fn();
+        // 返回的是一个promise对象
+        console.log(res);
+        res.then((value)=>{
+            console.log(value);
+        },(reason)=>{
+            console.warn(reason);
+        })
+    </script>
+</body>
+</html>

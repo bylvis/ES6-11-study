@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Phone{
+            constructor(brand,price){
+                this.brand = brand;
+                this.price = price;
+            }
+            call(){
+                console.log('i am call');
+            }
+        }
+
+        class smartPhone extends Phone{
+            constructor(brand,price,color,size){
+                super(brand,price);
+                this.color = color;
+                this.size = size;
+            }
+            game(){
+                console.log('i can play game');
+            }
+            movie(){
+                console.log('i can see movie');
+            }
+            // 可以重写父类
+            call(){
+                console.log('i can movie call');
+            }
+        }
+        const xiaomi = new smartPhone('xiaomi',999,'red',100)
+        console.log(xiaomi);
+        xiaomi.call();
+        xiaomi.game();
+        xiaomi.movie();
+    </script>
+</body>
+</html>

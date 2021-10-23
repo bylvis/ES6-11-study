@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const school = {
+            name :'SUSE'
+        }
+        const student = {
+            suser:'byl'
+        }
+        // 设置原型对象  吧student设置为了school的原型对象
+        Object.setPrototypeOf(school,student)
+        console.log(Object.getPrototypeOf(school));
+        console.log(school);
+    </script>
+    
+</body>
+</html>

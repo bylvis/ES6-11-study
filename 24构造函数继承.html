@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ES5 构造函数继承
+        function Phone(brand,price){
+            this.brand = brand;
+            this.price = price;
+        }
+
+        function smartPhone(brand,price,color,size){
+            // 等于上面两行 即也给了smart brand 和 price 这两个属性
+            Phone.call(this,brand,price);
+            this.color = color;
+            this.size = size;
+        }
+        // 设置了子级构造函数的原型
+        smartPhone.prototype = new Phone;
+        smartPhone.prototype.constructor = smartPhone
+
+        // 声名子类的方法
+        smartPhone.prototype.photo=()=>{
+            console.log('i can take photo');
+        }
+        smartPhone.prototype.game=()=>{
+            console.log('i can play game');
+        }
+        const xiaomi = new smartPhone('xiaomi',999,'red','100px')
+        console.log(xiaomi);
+
+    </script>
+</body>
+</html>

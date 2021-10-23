@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 这个值不等于0.3
+        console.log(0.1+0.2);
+        equal=(a,b)=>{
+            if(Math.abs(a-b) < Number.EPSILON){
+                console.log('a=b');
+            }
+            else{
+                console.log('a!=b');
+            }
+        }
+        console.log(0.1+0.2===0.3);
+        equal(0.1+0.2,0.3)
+        // 检测是否为有限数字
+        console.log(Number.isFinite(100/0));
+        // 检测一个数值是否为NAN
+        console.log(Number.isNaN(123));
+    </script>
+</body>
+</html>

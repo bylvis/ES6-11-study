@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Phone{
+            constructor(price){
+                this._price = 100;
+            }
+            get price(){
+                console.log('属性被查看');
+                return this._price
+            }
+            set price(newVal){
+                console.log('值被修改');
+                this._price = newVal;
+            }
+        }
+        const chuizi = new Phone()
+        chuizi.price
+        console.log(chuizi.price);
+        chuizi.price = 200
+    </script>
+</body>
+</html>
